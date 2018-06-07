@@ -47,9 +47,14 @@ cd shoppinglist-frontend
 
 # serve with hot reload at http://localhost:3000
 npm start
-```
-Note that the development build is not optimized.
-To create a production build, use
-```
+
+Inside that directory, you can also run several commands:
 npm run build
+Bundles the app into static files for production.
+
+npm test
+Starts the test runner.
+
+npm run eject
+Removes this tool and copies build dependencies, configuration files and scripts into the app directory. If you do this, you can’t go back!
 ```

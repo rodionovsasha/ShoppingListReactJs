@@ -24,6 +24,6 @@
 
     <modules>
         <module>shoppinglist-backend</module>
-        <!--<module>shoppinglist-frontend</module>-->
+        <module>shoppinglist-frontend</module>
     </modules>
 </project>

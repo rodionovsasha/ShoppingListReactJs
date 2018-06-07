@@ -1,0 +1,18 @@
+language: node_js
+
+node_js: 8
+
+script:
+  - mvn clean install
+
+branches:
+  only: master
+
+cache:
+  directories:
+    - "node_modules"
+    - $HOME/.m2/repository/
+    - $HOME/.m2/wrapper/
+
+notifications:
+  email: false

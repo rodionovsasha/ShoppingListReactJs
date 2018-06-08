@@ -6,10 +6,6 @@
 <pre>
 mvn clean install
 </pre>
-or using wrapper
-<pre>
-./mvnw clean install
-</pre>
 
 Build only backend:
 <pre>

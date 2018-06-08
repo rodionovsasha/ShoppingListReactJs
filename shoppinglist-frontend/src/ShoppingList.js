@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ItemsLists from './ItemsLists';
 
 const apiUrl = "http://localhost:8090/api/v1/";
 
@@ -53,17 +54,7 @@ class ShoppingList extends Component {
       return (
         <div className="col-md-6 offset-md-3">
           <h1>Shopping lists</h1>
-          <ul className="list-unstyled">
-            {lists.map(list =>
-              <li>
-                <p>
-                  <a href={"/itemsList/" + list.id} className="btn btn-outline-secondary">{list.name}</a>
-                  <a href={"/editItemsList/" + list.id} className="btn btn-warning btn-sm">Edit</a>
-                  <a href={"/deleteItemsList/" + list.id} className="btn btn-danger btn-sm">Delete</a>
-                </p>
-              </li>
-            )}
-          </ul>
+          <ItemsLists lists={lists}/>
           <a href="/addItemsList" className="btn btn-success btn-sm">Add</a>
         </div>
       );

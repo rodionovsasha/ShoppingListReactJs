@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import ItemsLists from './ItemsLists';
+import ErrorAlert from './ErrorAlert';
+import Loading from './Loading';
 
 const apiUrl = "http://localhost:8090/api/v1/";
 
@@ -41,15 +43,11 @@ class ShoppingList extends Component {
   render() {
     const {error, isLoaded, lists} = this.state;
     if (!isLoaded) {
-      return <div className="col-md-6 offset-md-3">Loading...</div>;
-    } else if (error) {
-      return (
-        <div className="col-md-6 offset-md-3">
-          <div className="alert alert-danger" role="alert">
-            <strong>{error.message}</strong>
-          </div>
-        </div>
-      );
+      return <Loading/>;
+    }
+
+    if (error) {
+      return <ErrorAlert message={error.message}/>;
     } else {
       return (
         <div className="col-md-6 offset-md-3">

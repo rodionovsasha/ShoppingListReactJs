@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
+import {API_URL} from './common';
 import ItemsLists from './ItemsLists';
 import ErrorAlert from './ErrorAlert';
 import Loading from './Loading';
-
-const apiUrl = "http://localhost:8090/api/v1/";
 
 class ShoppingList extends Component {
   constructor(props) {
@@ -20,7 +19,7 @@ class ShoppingList extends Component {
   }
 
   loadLists() {
-    fetch(apiUrl, {
+    fetch(API_URL, {
       method: 'GET'
     })
       .then(response => response.json())
@@ -34,7 +33,7 @@ class ShoppingList extends Component {
         (error) => {
           this.setState({
             isLoaded: true,
-            error
+            error: error
           });
         }
       );

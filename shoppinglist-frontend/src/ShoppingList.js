@@ -3,6 +3,7 @@ import {API_URL} from './common';
 import ItemsLists from './ItemsLists';
 import ErrorAlert from './ErrorAlert';
 import Loading from './Loading';
+import {Link} from 'react-router-dom';
 
 class ShoppingList extends Component {
   constructor(props) {
@@ -52,7 +53,7 @@ class ShoppingList extends Component {
         <div className="col-md-6 offset-md-3">
           <h1>Shopping lists</h1>
           <ItemsLists lists={lists}/>
-          <a href="/addItemsList" className="btn btn-success btn-sm">Add</a>
+          <Link to="/addItemsList" className="btn btn-success btn-sm">Add</Link>
         </div>
       );
     }

@@ -3,6 +3,7 @@ import {API_URL} from "./common";
 import ErrorAlert from "./ErrorAlert";
 import Loading from "./Loading";
 import {Link} from 'react-router-dom';
+import AllListsButton from "./AllListsButton";
 
 class ItemsList extends React.Component {
   constructor(props) {
@@ -94,11 +95,7 @@ class ItemsList extends React.Component {
                 <span className="oi oi-x"></span>
               </button>
             </li>
-            <li className="list-inline-item">
-              <Link to="/" className="btn btn-info btn-sm" role="button" data-toggle="tooltip" data-placement="bottom" title="All lists">
-                <span className="oi oi-list"></span>
-              </Link>
-            </li>
+            <AllListsButton/>
           </ul>
         </div>
       );

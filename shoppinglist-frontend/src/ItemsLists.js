@@ -1,6 +1,6 @@
 import React from 'react';
 import {API_URL} from './common';
-
+import {Link} from 'react-router-dom';
 
 class ItemsLists extends React.Component {
   constructor(props) {
@@ -38,8 +38,8 @@ class ItemsLists extends React.Component {
         {this.props.lists.map(list =>
           <li key={list.id}>
             <p>
-              <a href={"/itemsList/" + list.id} className="btn btn-outline-secondary">{list.name}</a>
-              <a href={"/editItemsList/" + list.id} className="btn btn-warning btn-sm">Edit</a>
+              <Link to={"/itemsList/" + list.id} className="btn btn-outline-secondary">{list.name}</Link>
+              <Link to={"/editItemsList/" + list.id} className="btn btn-warning btn-sm mx-1">Edit</Link>
               <button className="btn btn-danger btn-sm" onClick={this.deleteList.bind(this, list)}>Delete</button>
             </p>
           </li>

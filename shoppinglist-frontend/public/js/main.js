@@ -1,5 +1,7 @@
 $(function () {
   $(document).ready(function () {
-    $('[data-toggle="tooltip"]').tooltip({trigger: "hover"});
+    $('[data-toggle="tooltip"]').on('click', function () {
+      $(this).tooltip('hide')
+    });
   });
 });

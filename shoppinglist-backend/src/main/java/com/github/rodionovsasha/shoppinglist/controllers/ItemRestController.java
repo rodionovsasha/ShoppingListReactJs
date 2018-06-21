@@ -21,7 +21,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 @Slf4j
 @Api(tags = "Item")
 @RestController
-@RequestMapping(value = "/item", produces = APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/api/v1/item", produces = APPLICATION_JSON_VALUE)
 public class ItemRestController {
     @Autowired
     private ItemService itemService;

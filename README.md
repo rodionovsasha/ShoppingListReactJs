@@ -20,7 +20,7 @@ or simply run the application in your IDE using public static void main method.
 
 Open the following URL in browser:
 <pre>
-http://localhost:8090/api/v1/
+http://localhost:8090/
 </pre>
 Port and context path can be configured in `application.yml` properties.
 `8090` is a default port and can be overridden in a command line as well:
@@ -29,7 +29,7 @@ mvn spring-boot:run -Dport=9090
 ```
 
 ### Swagger
-http://localhost:8090/api/v1/swagger-ui.html
+http://localhost:8090/swagger-ui.html
 
 ### Rest JSON API URL
 ```

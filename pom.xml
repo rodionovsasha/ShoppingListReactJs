@@ -18,10 +18,6 @@
         <relativePath/>
     </parent>
 
-    <properties>
-        <main.basedir>${project.basedir}</main.basedir>
-    </properties>
-
     <modules>
         <module>shoppinglist-backend</module>
         <module>shoppinglist-frontend</module>

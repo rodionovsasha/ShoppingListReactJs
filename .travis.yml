@@ -10,7 +10,7 @@ branches:
 
 cache:
   directories:
-    - "node_modules"
+    - node_modules
     - $HOME/.m2/repository/
     - $HOME/.m2/wrapper/
 

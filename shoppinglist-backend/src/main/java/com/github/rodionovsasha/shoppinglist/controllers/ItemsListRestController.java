@@ -25,7 +25,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 @Slf4j
 @Api(tags = "Items List")
 @RestController
-@RequestMapping(produces = APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/api/v1", produces = APPLICATION_JSON_VALUE)
 public class ItemsListRestController {
     private static final String ITEMS_LIST_BASE_PATH = "/itemsList";
 

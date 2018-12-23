@@ -10,6 +10,9 @@ class AddItemsList extends React.Component {
     this.state = {
       error: null,
       fieldErrors: new FieldErrors(),
+      formErrors: {name: ''},
+      isNameValid: false,
+      isFormValid: false,
       name: ''
     };
 
@@ -17,19 +20,19 @@ class AddItemsList extends React.Component {
     this.saveList = this.saveList.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({
-      name: event.target.value
-    });
-  }
-
   // handleChange(event) {
-  //   const name = event.target.name;
-  //   const value = event.target.value;
   //   this.setState({
-  //     [name]: value
+  //     name: event.target.value
   //   });
   // }
+
+  handleChange(event) {
+    const name = event.target.name;
+    const value = event.target.value;
+    this.setState({
+      [name]: value
+    });
+  }
 
   saveList(event) {
     event.preventDefault();
@@ -76,7 +79,6 @@ class AddItemsList extends React.Component {
         console.error(err);
       });*/
       .then(function (response) {
-        console.log('response1 ' + response);
         if (!response.ok) {
           console.log('response.statusText ' + response.statusText);
           throw Error(response.statusText);
@@ -84,7 +86,6 @@ class AddItemsList extends React.Component {
         return response;
       })
       .then(() => {
-        console.log('success');
         return this.props.history.push('/');
       })
       .catch(function (error) {

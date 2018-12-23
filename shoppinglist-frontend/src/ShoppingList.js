@@ -48,15 +48,15 @@ class ShoppingList extends Component {
 
     if (error) {
       return <ErrorAlert message={error.message}/>;
-    } else {
-      return (
-        <div className="col-md-6 offset-md-3">
-          <h1>Shopping lists</h1>
-          <ItemsLists lists={lists}/>
-          <Link to="/addItemsList" className="btn btn-success btn-sm">Add</Link>
-        </div>
-      );
     }
+
+    return (
+      <div className="col-md-6 offset-md-3">
+        <h1>Shopping lists</h1>
+        <ItemsLists lists={lists}/>
+        <Link to="/addItemsList" className="btn btn-success btn-sm">Add</Link>
+      </div>
+    );
   }
 }
 

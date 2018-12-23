@@ -6,6 +6,8 @@ import registerServiceWorker from './registerServiceWorker';
 import ItemsList from "./ItemsList";
 import AddItemsList from "./AddItemsList";
 
+import 'bootstrap/dist/css/bootstrap.css';
+
 ReactDOM.render(
   <BrowserRouter>
     <Switch>

@@ -23,6 +23,14 @@ class AddItemsList extends React.Component {
     });
   }
 
+  // handleChange(event) {
+  //   const name = event.target.name;
+  //   const value = event.target.value;
+  //   this.setState({
+  //     [name]: value
+  //   });
+  // }
+
   saveList(event) {
     event.preventDefault();
     //let responseStatus = 0;
@@ -89,6 +97,7 @@ class AddItemsList extends React.Component {
 
   render() {
     const error = this.state.error;
+
     return (
       <div className="col-md-6 offset-md-3">
         {error && <ErrorAlert message={error.message}/>}
@@ -97,8 +106,7 @@ class AddItemsList extends React.Component {
           <div className="form-group">
             <label htmlFor="name" className="col-sm-1 control-label">Name:</label>
             <div className="col-sm-6">
-              <input type="text" id="name" value={this.state.name} onChange={this.handleChange}
-                     className="form-control"/>
+              <input type="text" name="name" value={this.state.name} onChange={this.handleChange} className="form-control"/>
               {/*<small v-if="fieldErrors.has('name')" className="text-danger" v-text="fieldErrors.get('name')"></small>*/}
             </div>
           </div>
